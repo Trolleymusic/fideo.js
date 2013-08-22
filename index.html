@@ -8,13 +8,16 @@
 		<meta name="viewport" content="width=device-width">
 	</head>
 	<body>
+		<h3>With</h3>
+		<iframe id="fideo-alaska" width="560" height="315" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0" allowfullscreen ></iframe>
+		<h3>Without</h3>
+		<iframe width="560" height="315" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0" allowfullscreen ></iframe>
+<pre><code>
+fideo({ target : "#fideo-alaska", size: "16:9" });
+</code></pre>
 		<script src="fideo.js"></script>
 		<script>
-			new fideo({});
-			new fideo({ size: "4:3" });
-			new fideo({ size: "16:9" });
-			new fideo({ size: "1:1" });
-			new fideo({ size: "1:22221" });
+			fideo({ target : "#fideo-alaska", size: "16:9" });
 		</script>
 	</body>
 </html>

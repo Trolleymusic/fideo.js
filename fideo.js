@@ -1,12 +1,39 @@
 (function () {
 	fideo = (function (options) {
-		var guide,
+		var o,
 			defaultSize = "16:9";
 		this.Init = function (options) {
-			guide = document.createElement("img");
-			guide.src = this.getGuide(options.size || defaultSize);
-			document.body.appendChild(guide);
+			var target = document.querySelectorAll(options.target),
+				wrapper = document.createElement("div"),
+				guide,
+				parent;
+
+			o = options;
+			
+			if (!target.length) { return; }
+			
+			target = target[0]; // only does this for one, should we loop through them?
+			
+			guide = this.makeGuide()
+			wrapper.appendChild(guide);
+			parent = target.parentNode;
+			parent.insertBefore(wrapper, target);
+			target.style.cssText = "position: absolute; width: 100%; height: 100%; top: 0; left: 0;"
+			wrapper.appendChild(target);
+			wrapper.style.cssText = "position: relative;";
+			
 		}
+		
+		// create the guide element
+		this.makeGuide = function () {
+			var guide = document.createElement("img");
+			guide.src = this.getGuide(o.size || defaultSize);
+			guide.style.cssText = "display: block; width: 100%";
+			return guide;
+		}
+		
+		// base64 image datauri for each aspect ratio
+		//	Only one complete one is stored, the rest store the differences
 		this.guides = {
 			"16:9": ["data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA",
 				"BA",
@@ -57,6 +84,8 @@
 				"B",
 				"+P//PwNAgAEACPwC/tuiTRYAAAAASUVORK5CYII"]
 		}
+		
+		// Get the correct datauri string
 		this.getGuide = function (size) {
 			var guide = this.guides[defaultSize];
 			if (this.guides[size] && size != defaultSize) {
@@ -67,6 +96,8 @@
 			}
 			return guide.join("");
 		}
+		
 		this.Init(options);
+		
 	});
 }());
