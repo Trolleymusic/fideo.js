@@ -1,3 +1,5 @@
+// fideo.js
+// http://github.com/Trolleymusic/fideo.js
 (function () {
 	fideo = (function (options) {
 		var o,
@@ -28,7 +30,7 @@
 		this.makeGuide = function () {
 			var guide = document.createElement("img");
 			guide.src = this.getGuide(o.size || defaultSize);
-			guide.style.cssText = "display: block; width: 100%";
+			guide.style.cssText = "display: block; width: 100%; height: auto;";
 			return guide;
 		}
 		

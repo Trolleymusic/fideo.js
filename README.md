@@ -16,7 +16,7 @@ At the moment there are three embedded aspect ratios, 16:9, 4:3 and 1:1 - if you
 
 To do:
 
-- Test on more platforms (so far tested on latest stable releases of Chrome, Firefox and Safari on OS X 10.7)
+- Test on more platforms (so far tested on latest stable releases of Chrome, Firefox and Safari on OS X 10.7. Now tested in IE9 & IE8 too!)
 - Demo page, one exists at demo.html but it's a bit limited
 - Refactor!
 - More comprehensive readme!
