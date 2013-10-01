@@ -6,24 +6,28 @@
 			defaultSize = "16:9";
 		this.Init = function (options) {
 			var target = document.querySelectorAll(options.target),
-				wrapper = document.createElement("div"),
-				guide,
-				parent;
+				i;
 
 			o = options;
 			
 			if (!target.length) { return; }
 			
-			target = target[0]; // only does this for one, should we loop through them?
+			for (i = 0; i < target.length; i++) {
+				this.enhance(target[i]);
+			}
 			
-			guide = this.makeGuide()
+		}
+		
+		this.enhance = function (target) {
+			var wrapper = document.createElement("div"),
+				guide = this.makeGuide(),
+				parent = target.parentNode;
+
 			wrapper.appendChild(guide);
-			parent = target.parentNode;
 			parent.insertBefore(wrapper, target);
 			target.style.cssText = "position: absolute; width: 100%; height: 100%; top: 0; left: 0;"
 			wrapper.appendChild(target);
 			wrapper.style.cssText = "position: relative;";
-			
 		}
 		
 		// create the guide element
