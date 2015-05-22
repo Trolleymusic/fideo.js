@@ -5,13 +5,21 @@
 		var o,
 			defaultSize = "16:9";
 		this.Init = function (options) {
-			var target = document.querySelectorAll(options.target),
+			var target = typeof(options.target) === "string" ? document.querySelectorAll(options.target) : options.target;
 				i;
 
 			o = options;
 			
+			// Target is a single HTML element
+			if (target.nodeName) {
+				return this.enhance(target);
+			}
+			
+			// Check the target is an array
 			if (!target.length) { return; }
 			
+			
+			// Loop through the nodes
 			for (i = 0; i < target.length; i++) {
 				this.enhance(target[i]);
 			}
