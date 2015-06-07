@@ -8,11 +8,17 @@ So fideo is a little piece of javascript that you run on the embedded iframe and
     <!-- Embed fideo (or copy/paste the .min.js into your plugins.js) -->
     <script src="fideo.min.js"></script>
     <script>
-        /* Call fideo as many times as you need to */
+        // Call fideo as many times as you need to
         fideo({ "target": "#selector", "size": "16:9" });
+        
+        // Leaving the size off defaults to 16:9
+        fideo({ "target": "#selector2" });
+        
+        // You can also give it an HTML node instead of a selector
+        fideo({ "target": htmlElement, "size": "2.39:1" });
     </script>
 
-At the moment there are three embedded aspect ratios, 16:9, 4:3 and 1:1 - if you don't specify a size when calling fideo, then it'll default to 16:9.
+At the moment there are six embedded aspect ratios, 16:9, 4:3, 1:1, 2.39:1, 2.35:1, and 21:9 - if you don't specify a size when calling fideo, then it'll default to 16:9.
 
 To do:
 
@@ -20,3 +26,4 @@ To do:
 - Demo page, one exists at demo.html but it's a bit limited
 - Refactor!
 - More comprehensive readme!
+

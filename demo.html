@@ -8,16 +8,70 @@
 		<meta name="viewport" content="width=device-width">
 	</head>
 	<body>
-		<h3>With</h3>
-		<iframe id="fideo-alaska" width="560" height="315" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0" allowfullscreen ></iframe>
 		<h3>Without</h3>
 		<iframe width="560" height="315" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0" allowfullscreen ></iframe>
-<pre><code>
-fideo({ target : "#fideo-alaska", size: "16:9" });
-</code></pre>
+		<h3>With</h3>
+		<iframe id="fideo-alaska" width="560" height="315" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0" allowfullscreen ></iframe>
+		<pre><code>
+	// Call fideo as many times as you need to
+	fideo({ "target": "#fideo-alaska", "size": "16:9" });
+	
+	// Leaving the size off defaults to 16:9
+	fideo({ "target": "#fideo-alaska" });
+	
+	// You can also give it an HTML node instead of a selector
+	var fideoAlaska = document.querySelectorAll("#fideo-alaska")[0];
+	fideo({ "target": fideoAlaska, "size": "2.39:1" });
+		</code></pre>
+
+		<hr>
+		<h3>Different ratios included:</h3>
+
+		<h4>2.35:1</h4>
+		<pre><code>
+fideo({ target : "#fideo-alaska-2351", size: "2.35:1" });
+		</code></pre>
+		<iframe id="fideo-alaska-2351" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0"></iframe>
+		
+		<h4>2.39:1</h4>
+		<pre><code>
+fideo({ target : "#fideo-alaska-2391", size: "2.39:1" });
+		</code></pre>
+		<iframe id="fideo-alaska-2391" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0"></iframe>
+		
+		<h4>21:9</h4>
+		<pre><code>
+fideo({ target : "#fideo-alaska-219", size: "21:9" });
+		</code></pre>
+		<iframe id="fideo-alaska-219" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0"></iframe>
+		
+		<h4>16:9</h4>
+		<pre><code>
+fideo({ target : "#fideo-alaska-169", size: "16:9" });
+		</code></pre>
+		<iframe id="fideo-alaska-169" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0"></iframe>
+		
+		<h4>4:3</h4>
+		<pre><code>
+fideo({ target : "#fideo-alaska-43", size: "4:3" });
+		</code></pre>
+		<iframe id="fideo-alaska-43" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0"></iframe>
+		
+		<h4>1:1</h4>
+		<pre><code>
+fideo({ target : "#fideo-alaska-11", size: "1:1" });
+		</code></pre>
+		<iframe id="fideo-alaska-11" src="//www.youtube.com/embed/FoA72T7Z-6A" frameborder="0"></iframe>
+
 		<script src="fideo.js"></script>
 		<script>
 			fideo({ target : "#fideo-alaska", size: "16:9" });
+			fideo({ target : "#fideo-alaska-2391", size: "2.39:1" });
+			fideo({ target : "#fideo-alaska-2351", size: "2.35:1" });
+			fideo({ target : "#fideo-alaska-219", size: "21:9" });
+			fideo({ target : "#fideo-alaska-169", size: "16:9" });
+			fideo({ target : "#fideo-alaska-43", size: "4:3" });
+			fideo({ target : "#fideo-alaska-11", size: "1:1" });
 		</script>
 	</body>
 </html>
