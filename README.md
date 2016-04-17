@@ -1,6 +1,8 @@
 # fideo.js
 ### Makes your damn video embeds fit proper
 
+DEMO: [http://waynedurack.com/fideo.js/]
+
 I've been sticking loads of youtube and vimeo embeds in sites recently, and they're easy to do, but there's always a few extra lines of CSS and a couple of extra div wrappers you need to write to get them to be dynamically sized and/or work properly in a responsive design without them hanging out the end.
 
 So fideo is a little piece of javascript that you run on the embedded iframe and it'll take care of everything. You don't need to add any images or CSS and it has no dependencies.
@@ -23,7 +25,6 @@ At the moment there are six embedded aspect ratios, 16:9, 4:3, 1:1, 2.39:1, 2.35
 To do:
 
 - Test on more platforms (so far tested on latest stable releases of Chrome, Firefox and Safari on OS X 10.7. Now tested in IE9 & IE8 too!)
-- Demo page, one exists at demo.html but it's a bit limited
 - Refactor!
 - More comprehensive readme!
 
