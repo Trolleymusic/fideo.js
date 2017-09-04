@@ -1,0 +1,19 @@
+{
+  "name": "fideo.js",
+  "version": "1.0.0",
+  "description": "Makes your damn video embeds fit proper",
+  "main": "fideo.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trolleymusic/fideo.js.git"
+  },
+  "keywords": [
+    "video"
+  ],
+  "author": "Trolleymusic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trolleymusic/fideo.js/issues"
+  },
+  "homepage": "https://github.com/Trolleymusic/fideo.js#readme"
+}

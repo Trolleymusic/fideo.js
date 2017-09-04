@@ -1,7 +1,7 @@
 // fideo.js
 // http://github.com/Trolleymusic/fideo.js
 (function () {
-	fideo = (function (options) {
+	window.fideo = (function (options) {
 		var o,
 			defaultSize = "16:9";
 		this.Init = function (options) {
